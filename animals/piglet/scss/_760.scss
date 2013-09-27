@@ -1,0 +1,26 @@
+header {
+	width: 760px;
+	aside {
+		width: 300px;
+	}
+	section {
+		width: 445px;
+	}
+}
+
+main {
+	width: 760px;
+	aside {
+		float: left;
+		width: 300px;
+	}
+}
+
+.content {
+	float: right;
+	width: 440px;
+	article {
+		margin: 0;
+		width: 100%;
+	}
+}

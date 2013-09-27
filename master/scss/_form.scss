@@ -1,0 +1,68 @@
+/* Form */
+form { position: relative;
+	input, select, button, textarea { background: $white; border: 1px solid $lightGrey; border-top: 1px solid $lightGrey; }
+	input, select, button, textarea { margin-bottom: 1em; -moz-appearance: none; appearance: none; -webkit-appearance: none; text-overflow: ''; text-indent: 0.01px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; white-space: none; min-height: 1.2em; padding:.5em;
+		&:focus { border: 1px solid $lightGrey; }
+		&:hover { @extend input:focus; }
+	}
+	input { width: 96%; 
+		&.radio, &.checkbox { background: none; border: medium none; vertical-align: top; width: auto; }
+		&.checkbox { float: left; margin-right: .5em; }
+		&[type="button"] {width:auto;}
+	}
+	select { width: 100%; position:relative;
+		&::-ms-expand { display: none; }
+		.section { background-color: $darkGrey; color: $white; }
+	}
+	.selectfield {
+		&:before { background: $white; content: ""; display: inline-block; height: 1.5em; pointer-events: none; position: absolute; right: .5em; top: .5em; width: 1.5em; z-index: 1; }
+		&:after { content:""; display: inline-block; pointer-events: none; border-color:transparent; border-style:solid; border-width: .5em; border-bottom:none; border-top-color:$darkGrey; top:1em; right:.75em; position:absolute; z-index:100; }
+	}
+	label, textarea { clear: both; width: 98%; }
+	label {
+		&.radio, &.checkbox { clear: none; display: inline; }
+		&.checkbox { display: block; margin-bottom: .1em; width: 89%; }
+	}
+	&.labelsInside {
+		.firstname, .phone { clear:none; @include pushpullwidth(6); @include pull(6); float:left;
+			input{width:100%;}
+		}
+
+		.lastname, .email { clear:none; @include pushpullwidth(6); @include push(6); float:right;
+			input{width:100%;}
+		}
+	}
+	.steps-indicator  { font-size:0.8em; margin: $spacing;
+		.progress { border:1px solid $lightGrey; height:18px; margin:.5em 0; }
+		.bar { background-color: $lightGrey; height:100%; }
+	}
+}
+
+/* Labels Inside */
+  /* hide labels first */
+  label {display:none;}
+.blurInput label {display:block; position:absolute; padding:.6em; top:0; left:0; z-index:100;}
+.hideLabel label {display:none;}
+
+/*form div[data-stepid]{text-align:right;}
+form div[data-stepid] label{text-align:left;}*/
+
+/* Validation */
+.field { position:relative; clear:left; }
+.hybrid #field6 .field-validation-error, .hybrid #field8 .field-validation-error{ right:-2%; }
+.field-validation-valid { display:none; }
+.textfield  .input-validation-error, .textfield  .input-validation-error:focus , .selectfield  .input-validation-error, .selectfield  .input-validation-error:focus { background-color: $inputError; background-image:none; }
+.field-validation-error { background-color: $red; content: "&#88"; color: $white; display:block; font-weight:bold; height:15px; left:-16px; top:18px; position:absolute; padding-left:5px; width:8px; z-index:998; }
+.checkboxfield  .field-validation-error { top:0; }
+.labelsInside .field-validation-error { top:.5em; }
+.radiofield  .field-validation-error { top:16px; }
+.field-validation-error span { border-top:7px solid transparent; border-left:8px solid $red; border-bottom:9px solid transparent; height:0; overflow:hidden; position:absolute; right:-8px; top:0; width:0; text-indent:-9000px; }
+.field-validation-error-messaging { background:#fcf8ae url(/images/icons/warning-icon.png) no-repeat right bottom; border:1px solid #f6deae; border-radius:7px; box-shadow:0px 9px 5px -6px rgba(0,0,0,0.2); border-collapse:separate; color:#333; display:none; margin:0 auto 15px; padding:15px; position:relative; width:90%;}
+#form .field-validation-error-messaging { height:auto; }
+.field-validation-error-messaging h6, #form .field-validation-error-messaging h6 { color: $black; font-size:14px; font-weight:bold; }
+.field-validation-error-messaging ul { margin:5px 0 0 5px; @include vendor-prefix(column-width, 150px); }
+.field-validation-error-messaging li { color:#333; }
+.field-validation-error-messaging .arrow { border-left: 13px solid transparent; border-right: 13px solid transparent; border-top: 13px solid #f6deae; bottom:-13px; box-shadow: 0px 9px 5px -6px rgba(0,0,0,0.2);  border-collapse:separate; height:0; left:45%; position:absolute; width:0; }
+.field-validation-error-messaging .arrow span{ border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid #fcf8ae; bottom:2px; height: 0; left:-12px; position:absolute; width:0; }
+.validation-summary-errors { display:block; }
+.bat-hidden-error { display:none; }

@@ -1,0 +1,88 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+}
+
+header {
+	background: #ccc;
+	width: 100%;
+	section {
+		background: #6eafe0;
+		height: 50px;
+		padding: 10px 0;
+		margin: 0 auto;
+		max-width: 320px;
+	}
+}
+
+.school-image {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	img {
+		width: 100%;
+	}
+	blockquote {
+		bottom: 0;
+		color: #fff;
+		font-size: 1.5em;
+		margin: 0;
+		padding: 10px 2%;
+		position: absolute;
+		width: 96%;
+	}
+}
+
+.text-section {
+	font-size: .8em;
+	margin: 0 auto;
+	position: relative;
+	width: 90%;
+}
+
+.form {
+	margin: 0 auto;
+	padding: 10px 0;
+	position: relative;
+	width: 95%;
+}
+
+aside {
+	margin: 10px auto;
+	padding: 10px;
+	width: 90%;
+}
+
+.lead-form {
+	background: #EEEEEE;
+	padding: 5%;
+	position: relative;
+	width: 90%;
+	input[type=text], select {
+		border: none;
+		font: normal;
+		font-size: .8em;
+		line-height: normal;
+		margin: 5px 0;
+		padding: 2%;
+		-webkit-appearance: none;
+		white-space: none;
+	}
+	input[type=text] {
+		width: 96%;
+	}
+	select {
+		width: 100%;
+	}
+	progress, progress::-webkit-progress-bar {
+		background: #fff;
+		box-shadow: 0 0 2px #999;
+		border-radius: 5px;
+	} 
+	progress::-webkit-progress-value {
+		background: orange;
+	}
+}

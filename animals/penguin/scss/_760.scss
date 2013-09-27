@@ -1,0 +1,47 @@
+.brand {
+	margin: 20px 0;
+}
+
+main {
+	margin: 0 auto;
+	width: 760px;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.school-image, .form {
+	display: block;
+	float: left;
+}
+
+.school-image {
+	width: 440px;
+	img {
+		width: 760px;
+	}
+}
+
+blockquote {
+	bottom: 1em;
+	padding: 5%;
+	width: 80%;
+}
+
+.main-copy {
+	float: left;
+	margin: 0;
+	width: 70%;
+}
+
+.text-section {
+	margin: 0;
+	width: 90%;
+}
+
+.video {
+	float: right;
+	margin: 0;
+	width: 30%;
+}

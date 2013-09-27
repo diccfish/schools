@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "lp-icons";
+  src: url("lp-icons.eot");
+  src: url("lp-icons.eot?#iefix") format("embedded-opentype"),
+       url("lp-icons.woff") format("woff"),
+       url("lp-icons.ttf") format("truetype"),
+       url("lp-icons.svg#lp-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-pm:before,
+.icon-puzzle:before,
+.icon-mkt:before,
+.icon-cycle:before,
+.icon-business:before,
+.icon-fingerprint:before,
+.icon-health2:before,
+.icon-triangle:before,
+.icon-figure:before,
+.icon-health:before,
+.icon-computer:before,
+.icon-calculator:before,
+.icon-bar-graph:before,
+.icon-mkt:before,
+.icon-relation-chart:before,
+.icon-mindpuzzle:before{
+  font-family: "lp-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.icon-pm:before { content: "\f100"; }
+.icon-puzzle:before { content: "\f101"; }
+.icon-cycle:before { content: "\f103"; }
+.icon-business:before { content: "\f104"; }
+.icon-fingerprint:before { content: "\f105"; }
+.icon-health2:before { content: "\f106"; }
+.icon-triangle:before { content: "\f107"; }
+.icon-figure:before { content: "\f108"; }
+.icon-health:before { content: "\f109"; }
+.icon-computer:before { content: "\f10a"; }
+.icon-calculator:before { content: "\f10b"; }
+.icon-bar-graph:before { content: "\f10c"; }
+.icon-mkt:before { content: "\f10d"; }
+.icon-relation-chart:before { content: "\f10e"; }
+.icon-mindpuzzle:before { content: "\f10f"; }

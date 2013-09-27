@@ -1,0 +1,43 @@
+header {
+	margin: 0 auto;
+	width: 685px;
+	aside, section {
+		display: inline-block;
+		margin: 10px 0;
+		vertical-align: middle;
+	}
+	aside {
+		margin-left: 10px;
+		width: 300px;
+	}
+	section {
+		line-height: 80px;
+		width: 370px;
+	}
+}
+
+main {
+	margin: 0 auto;
+	width: 685px;
+	aside {
+		float: left;
+		width: 300px;
+		img {
+			display: block;
+			margin: 0 auto;
+			width: auto;
+		}
+	}
+}
+
+.content {
+	float: left;
+	width: 365px;
+	article {
+		width: 355px;
+	}
+	.form {
+		float: left;
+		width: 320px;
+	}
+}

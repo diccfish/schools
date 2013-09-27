@@ -1,0 +1,70 @@
+img { width: 100%; }
+
+/*--- Header ----*/
+.logo { height: 80px; 
+	object, img { height: 100%; width: auto; }
+}
+.logocolor { fill: $primaryColor; }
+.tagline { line-height: 80px; text-align: center; }
+
+/*--- Concept ----*/
+blockquote { color: $darkGrey; margin: 2.5em 0; }
+
+/*--- Background Opacity ----*/
+.background{ opacity: .6; position:absolute; left:0; top:0; height:100%; width:100%; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; }
+
+/*--- Button ----*/
+button, input[type=submit] { 
+	border: none; 
+	cursor: pointer;
+	font-family: inherit;
+	margin: $spacing;
+	outline: none;
+	@include vendor-prefix (transition, 0.3s);
+}
+
+/*--- Grid ----*/
+.span1 { @include column(12) }
+.span2 { @include column(12) }
+.span3 { @include column(12) }
+.span4 { @include column(12) }
+.span5 { @include column(12) }
+.span6 { @include column(12) }
+.span7 { @include column(12) }
+.span8 { @include column(12) }
+.span9 { @include column(12) }
+.span10 { @include column(12) }
+.span11 { @include column(12) }
+.span12 { @include column(12) }
+.span12, .container { max-width: 300px; }
+
+.spread {
+  .span1 { @include pushpullwidth(12); }
+  .span2 { @include pushpullwidth(12); }
+  .span3 { @include pushpullwidth(12); }
+  .span4 { @include pushpullwidth(12); }
+  .span5 { @include pushpullwidth(12); }
+  .span6 { @include pushpullwidth(12); }
+  .span7 { @include pushpullwidth(12); }
+  .span8 { @include pushpullwidth(12); }
+  .span9 { @include pushpullwidth(12); }
+  .span10 { @include pushpullwidth(12); }
+  .span11 { @include pushpullwidth(12); }
+  .span12  { @include pushpullwidth(12); }
+  *[class*="span"] {
+    &:nth-of-type(1) { @include pull(); } 
+    &:last-child { @include push(); }
+  }
+}
+
+.container, .row { 
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; 
+  &:after {
+    content: "";
+    clear: both;
+  }
+}

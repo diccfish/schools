@@ -1,0 +1,103 @@
+body {
+	background: #666;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	section {
+		height: 50px;
+		margin: 20px auto;
+		width: 100%;
+	}
+}
+
+main {
+	color: #333;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+}
+
+.container {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	&:after {
+		content: "";
+		clear: both;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.text-section {
+	color: #fff;
+	font-size: .8em;
+	margin: 0 auto;
+	position: relative;
+	width: 90%;
+}
+
+
+.school-image {
+	max-height: 500px;
+	position: relative;
+}
+
+blockquote {
+	background: rgba(0,0,0,0.4);
+	bottom: 0;
+	color: #fff;
+	font-size: 1.5em;
+	left: 0;
+	margin: 0;
+	padding: 10px 2%;
+	position: absolute;
+	width: 96%;
+	z-index: 99;
+}
+
+.form {
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 95%;
+}
+
+.lead-form {
+	background: #EEEEEE;
+	padding: 5%;
+	position: relative;
+	width: 90%;
+	input[type=text], select {
+		border: none;
+		font: normal;
+		font-size: .8em;
+		line-height: normal;
+		margin: 5px 0;
+		padding: 2%;
+		-webkit-appearance: none;
+		white-space: none;
+	}
+	input[type=text] {
+		width: 96%;
+	}
+	select {
+		width: 100%;
+	}
+	progress, progress::-webkit-progress-bar {
+		background: #fff;
+		box-shadow: 0 0 2px #999;
+		border-radius: 5px;
+	} 
+	progress::-webkit-progress-value {
+		background: orange;
+	}
+}
+
+.video {
+	background: pink;
+	height: 300px;
+	margin: 0 auto;
+	width: 90%;
+}

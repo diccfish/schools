@@ -1,0 +1,30 @@
+header {
+	section {
+		max-width: 685px;
+	}
+}
+
+.school-image {
+	max-height: 500px;
+	blockquote { 
+		bottom: 100px;
+		width: 340px;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	max-width: 685px;
+}
+
+.form {
+	position: absolute;
+	top: -300px;
+	right: 0;
+}
+
+.text-section {
+	margin: 0;
+	width: 350px;
+}

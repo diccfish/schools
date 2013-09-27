@@ -1,0 +1,41 @@
+$primaryColor: #00FFFF;
+$secondaryColor: #472986;
+
+body{background-color:#ededed;}
+header{ position: relative; z-index: 10; }
+.default{
+	.container{box-shadow:0 0 8px 4px $lightGrey;top:-87px; margin-bottom:-87px; padding-top:87px; background:$white url(../images/prairiedog.jpg) no-repeat top center; }
+}
+.tagline{ color:$white; text-align: center; line-height: 87px;}
+.container{padding:0 2%;}
+.lead{ background: url(../images/pronghorn.jpg) top center no-repeat; background-size:cover; background-position: 20%; z-index:0; position:relative; }
+.primary{ 
+	.pointofcontact{  
+		&> div{position:relative; padding:4%;}
+		.background{background-color:cyan; opacity:.5; position:absolute; left:0; top:0; height:100%; width:100%;}
+		.required-note{ font-size:.95em; }
+	}
+}
+.secondary{ background-color:$white; overflow:hidden; clear:both; padding:1em 2%; }
+footer{ padding:1em 4%; text-align:center; }
+
+@media (min-width: 20em) {
+
+} 
+
+@media (min-width: 30em) {
+.container{padding:0;}
+.tagline{ text-align: right; line-height: 83px;}
+.lead{ 
+	.span8{padding-top: 280px;}
+}
+.pointofcontact{ float:right; /* not a fan of this beacuse spread is not working correctly */
+	&> div{}
+}
+footer{ padding:1em 2%; text-align:left; }
+
+}
+
+@media (min-width: 60em) {
+	
+}

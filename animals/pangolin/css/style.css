@@ -1,0 +1,292 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2.333rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.583rem;
+}
+
+h4 {
+  font-size: 1.417rem;
+}
+
+h5 {
+  font-size: 1.083rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header section {
+  background: rgba(0, 0, 0, 0.13);
+  height: 50px;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+header .logo {
+  background: cyan;
+  height: 50px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+main {
+  color: black;
+  font-family: sans-serif;
+  font-weight: normal;
+  position: relative;
+}
+main section {
+  position: relative;
+}
+main article {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+main img {
+  width: 100%;
+}
+
+.clearfix {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+}
+
+.page-title {
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 3em;
+  left: 0;
+  margin: 0;
+  padding: 10px 2%;
+  position: absolute;
+  top: 2em;
+  width: 96%;
+  z-index: 99;
+}
+
+.form {
+  margin: 0 auto;
+  padding: 10px 0;
+  position: relative;
+  width: 95%;
+}
+
+form {
+  background: rgba(0, 255, 255, 0.6);
+  padding: 5%;
+  position: relative;
+  width: 90%;
+}
+form input[type=text], form select {
+  border: none;
+  font: normal;
+  font-size: .8em;
+  line-height: normal;
+  margin: 5px 0;
+  padding: 2%;
+  -webkit-appearance: none;
+  white-space: none;
+}
+form input[type=text] {
+  width: 96%;
+}
+form select {
+  width: 100%;
+}
+form input[type=submit], form button {
+  background: #472986;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: 5px 15px;
+}
+form progress, form progress::-webkit-progress-bar {
+  background: #fff;
+  box-shadow: 0 0 2px #999;
+  border-radius: 5px;
+}
+form progress::-webkit-progress-value {
+  background: orange;
+  border-radius: 5px;
+}
+
+aside {
+  width: 100%;
+}
+aside article {
+  background: #999;
+  height: 200px;
+  width: 100%;
+}
+aside article:before {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  content: "";
+  height: 60px;
+  left: 120px;
+  position: absolute;
+  width: 60px;
+  top: 70px;
+}
+aside article:after {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #fff;
+  content: "";
+  left: 140px;
+  position: absolute;
+  top: 80px;
+}
+
+@media (min-width: 320px) {
+  header .logo {
+    float: left;
+    width: 300px;
+  }
+
+  main img {
+    box-shadow: 0 0 10px #aaa;
+  }
+
+  .form {
+    padding: 0;
+    width: 300px;
+  }
+
+  aside {
+    margin: 0 auto;
+    width: 300px;
+  }
+  aside article {
+    margin: 0 5%;
+  }
+
+  form {
+    padding: 10px;
+    width: 280px;
+  }
+  form input[type=text], form select {
+    margin: 5px 0;
+    padding: 5px;
+  }
+  form input[type=text] {
+    width: 125px;
+  }
+  form input[type=text]:nth-of-type(2n+1) {
+    margin-right: 7px;
+  }
+  form select {
+    width: 280px;
+  }
+}
+@media (min-width: 685px) {
+  header section {
+    max-width: 685px;
+  }
+
+  .form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .page-title {
+    left: auto;
+    right: 300px;
+    width: 320px;
+  }
+
+  article {
+    width: 60%;
+  }
+}
+@media (min-width: 760px) {
+  header section {
+    max-width: 760px;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 760px;
+  }
+
+  .page-title {
+    width: 340px;
+  }
+}
+@media (min-width: 960px) {
+  header section {
+    max-width: 960px;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 960px;
+  }
+  main article {
+    margin: 0;
+    width: auto;
+  }
+
+  .content {
+    float: left;
+    margin: 0;
+    width: 620px;
+  }
+
+  aside {
+    float: right;
+    margin-left: 40px;
+  }
+  aside ul {
+    margin: 0 auto;
+    padding-left: 2em;
+    list-style-type: none;
+  }
+  aside ul li {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  aside ul li:before {
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid black;
+    border-top: 4px solid transparent;
+    content: "";
+    left: -15px;
+    position: absolute;
+    top: .45em;
+  }
+  aside article {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,36 @@
+body{background-color:#ededed;}
+header{background-color:$white;}
+.lead{ background: url(../images/pronghorn.jpg) top center no-repeat; background-size:cover; background-position: 20%; z-index:0; position:relative; }
+.primary{
+	.pointofcontact{  
+		&> div{position:relative; padding:4%;}
+		.progress { border-color:$primaryColor; 
+			.bar { background-color:$primaryColor; }
+			}
+		.background { background-color: $secondaryColor; }
+		.required-note{ font-size:.95em; }
+	}
+}
+
+.secondary{ background-color:$white; overflow:hidden; padding:1em 2%; }
+footer{ padding:1em 4%; text-align:center; }
+
+@media (min-width: 30em) {
+.lead{min-height:494px; 
+	.span8{padding-top: 280px;}
+}
+.default{ 
+	.container{ margin-top:-200px;}
+	.primary { margin-bottom:2em; overflow:hidden; }
+	blockquote {padding-top: 220px;}
+}
+.pointofcontact{ 
+	&> div{min-height:375px;}
+}
+footer{ padding:1em 2%; text-align:left; }
+
+}
+
+@media (min-width: 60em) {
+	
+}

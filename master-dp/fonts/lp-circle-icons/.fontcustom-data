@@ -1,0 +1,31 @@
+{
+  "fonts": [
+    "lp-circle-icons.ttf",
+    "lp-circle-icons.woff",
+    "lp-circle-icons.eot",
+    "lp-circle-icons.svg"
+  ],
+  "templates": [
+    "lp-circle-icons-preview.html",
+    "style.css"
+  ],
+  "file_name": "lp-circle-icons",
+  "glyphs": [
+    "pm-circle",
+    "computer-circle",
+    "health2-circle",
+    "relation-chart-circle",
+    "mkt-circle",
+    "cycle-circle",
+    "calculator-circle",
+    "health-circle",
+    "bar-graph-circle",
+    "power-circle",
+    "triangle-circle",
+    "figure-circle",
+    "briefcase-circle",
+    "mindpuzzle-circle",
+    "puzzle-circle",
+    "fingerprint-circle"
+  ]
+}

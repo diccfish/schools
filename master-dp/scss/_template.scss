@@ -1,0 +1,61 @@
+header {
+	section {
+		background: $primaryColor;
+		height: 50px;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+
+main {
+	color: #333;
+	font-family: $primaryFont;
+	font-weight: normal;
+	article {
+		font-size: .8em;
+		margin: 0 auto;
+		width: 90%;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.form {
+	margin: 0 auto;
+	form {
+		background: $secondaryColor;
+		input[type=text], select {
+			font-size: .8em;
+			line-height: normal;
+		}
+		progress, progress::-webkit-progress-bar {
+			background: #fff;
+			box-shadow: 0 0 2px #999;
+			border-radius: 5px;
+		} 
+		progress::-webkit-progress-value {
+			background: orange;
+		}
+	}
+}
+
+blockquote {
+	background: rgba(0,235,190,0.7);
+	font-family: $secondaryFont;
+	font-size: 2em;
+	left: 0;
+	margin: 0;
+	padding: 10px 2%;
+	position: absolute;
+	top: 2em;
+	width: 96%;
+	z-index: 99;
+}
+
+video {
+	background: $primaryColor;
+	height: 250px;
+	margin: 0 5%;
+	width: 90%;
+}

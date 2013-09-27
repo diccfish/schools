@@ -1,0 +1,70 @@
+$primaryColor: #00FFFF;
+$secondaryColor: #472986;
+
+header {
+    background: $lightGrey;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+    a {
+        display: block;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+    }
+}
+
+.lead {
+    margin: 2em 0;
+}
+
+.form {
+    background: rgba($primaryColor, 0.7);
+    padding: 10px;
+}
+
+ul {
+    margin-bottom: 2em;
+    padding: 0 0 0 20px;
+}
+
+@media (min-width: 20em) {
+
+}
+
+@media (min-width: 30em) {
+
+}
+
+@media (min-width: 60em) {
+    .logo {
+        border-right: 2px solid #fff;
+     }
+     .lead {
+        margin: 2em 0;
+        .container {
+            overflow: visible;
+            .primary {
+                overflow: visible;
+                position: relative;
+                &:after {
+                    background: url(../images/arrow-down.png) $primaryColor 50% no-repeat;
+                    content: "";
+                    height: 4em;
+                    position: absolute;
+                    right: -1.25em;
+                    top: -4em;
+                    width: 4em;
+                    z-index: 999;
+                }
+            }
+        }
+    }
+}

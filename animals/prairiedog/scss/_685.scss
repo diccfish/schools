@@ -1,0 +1,52 @@
+header {
+	section {
+		background: rgba(0,220,200,0.5);
+		height: 50px;
+		left: 0;
+		position: absolute;
+		margin: 0;
+		top: 0;
+		z-index: 99;
+	}
+}
+
+.school-image {
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	img {
+		position: relative;
+		top: -25%;
+		width: 125%;
+	}
+}
+
+blockquote {
+	background: transparent;
+	color: #333;
+	left: auto;
+	margin: 20px auto;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	top: 0;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 685px;
+}
+
+.form {
+	position: absolute;
+	top: -330px;
+	right: 0;
+}
+
+.text-section {
+	margin: 0;
+	width: 350px;
+}

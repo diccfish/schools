@@ -1,0 +1,26 @@
+header {
+	section {
+		width: 300px;
+	}
+}
+
+aside {
+	width: 280px;
+}
+
+.form {
+	width: 320px;
+	form {
+		width: 300px;
+		input[type=text], select {
+			margin: 5px 0;
+			padding: 5px;
+		}
+		input[type=text] {
+			width: 135px;
+			&:nth-of-type(2n+1) {
+				margin-right: 5px;
+			}
+		}
+	}
+}

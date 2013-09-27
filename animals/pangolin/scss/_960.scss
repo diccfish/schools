@@ -1,0 +1,47 @@
+header {
+	section {
+		max-width: 960px;
+	}
+}
+
+main {
+	margin: 0 auto;
+	width: 960px;
+	article {
+		margin: 0;
+		width: auto;
+	}
+}
+
+.content {
+	float: left;
+	margin: 0;
+	width: 620px;
+}
+
+aside {
+	float: right;
+	margin-left: 40px;
+	ul {
+		margin: 0 auto;
+		padding-left: 2em;
+		list-style-type: none;
+		li {
+			line-height: 1.5em;
+			margin-bottom: 1em;
+			position: relative;
+			&:before {
+				border-bottom: 4px solid transparent;
+				border-left: 4px solid $black;
+				border-top: 4px solid transparent;
+				content: "";
+				left: -15px;
+				position: absolute;
+				top: .45em;
+			}
+		}
+	}
+	article {
+		margin: 20px 0;
+	}
+}

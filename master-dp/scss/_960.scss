@@ -1,0 +1,30 @@
+header {
+	section {
+		width: 960px;
+	}
+}
+
+main {
+	margin: 0 auto;
+	width: 960px;
+	article {
+		margin: 0;
+		width: auto;
+	}
+}
+
+.page-title {
+	width: 480px;
+}
+
+.content {
+	float: left;
+	margin: 0;
+	width: 620px;
+}
+
+video {
+	float: right;
+	margin: 20px 0 0;
+	width: 320px;
+}

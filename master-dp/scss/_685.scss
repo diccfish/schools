@@ -1,0 +1,22 @@
+header {
+	section {
+		width: 685px;
+	}
+}
+
+.form {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 999;
+}
+
+.page-title {
+	left: auto;
+	right: 300px;
+	width: 320px;
+}
+
+article {
+	width: 60%;
+}

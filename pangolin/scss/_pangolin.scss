@@ -1,0 +1,74 @@
+$primaryColor: #00FFFF;
+$secondaryColor: #472986;
+
+.logo {
+    height: 50px;
+    margin-top: 10px;
+    a {
+        display: block;
+    }
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.tagline {
+    background: $lightGrey;
+    line-height: 60px;
+    text-align: right;
+}
+
+.lead, .defualt {
+    margin: 1em 0;
+    position: relative;
+}
+.lead {
+    background: url(../images/pangolin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    box-shadow: 0 0 4px $darkGrey;
+    min-height: 320px;
+}
+
+.form {
+    background: rgba($primaryColor, 0.7);
+    padding: 10px;
+}
+
+blockquote {
+    background: rgba($darkGrey, 0.35);
+    color: #fff;
+    margin: 2em 0;
+    padding: 1em;
+}
+
+ul {
+    padding: 0 0 0 10px;
+}
+
+@media (min-width: 20em) {
+
+}
+
+@media (min-width: 30em) {
+
+}
+
+@media (min-width: 48em) {
+    .lead {
+        min-height: 420px;
+    }
+    blockquote {
+        display: inline-block;
+        float: right;
+    }
+}
+
+@media (min-width: 60em) {
+    .lead {
+        background-position: 50%;
+        min-height: 500px;
+    }
+}

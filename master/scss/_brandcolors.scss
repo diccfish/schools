@@ -1,0 +1,81 @@
+/*== Brand Colors ==*/
+  $primaryBrandColor: #000;
+  $secondaryBrandColor: #fff;
+  $tertiaryBrandColor: #ccc;
+
+  $brandCode: ua !default;
+
+  @if $brandCode == ua {
+    $primaryBrandColor: #001D5F;
+    $secondaryBrandColor: #FFDD00;
+    $tertiaryBrandColor: #E86D1F;
+  } @else if $brandCode == bis {
+    $primaryBrandColor: #004990;
+    $secondaryBrandColor: #FCB130;
+    $tertiaryBrandColor: #E86D1F;
+  } @else if $brandCode == cctv {
+    $primaryBrandColor: #061C39;
+    $secondaryBrandColor: #619EC4;
+    $tertiaryBrandColor: #E86D1F;
+  } @else if $brandCode == du {
+    $primaryBrandColor: #283F6E;
+    $secondaryBrandColor: #9B7716;
+    $tertiaryBrandColor: #4D4D4D;
+  } @else if $brandCode == ftuo {
+    $primaryBrandColor: #660000;
+    $secondaryBrandColor: #CCCC99;
+  } @else if $brandCode == ju {
+    $primaryBrandColor: #104441;
+    $secondaryBrandColor: #000000;
+  } @else if $brandCode == msu {
+    $primaryBrandColor: #18453B;
+  } @else if $brandCode == nec {
+    $primaryBrandColor: #002D6A;
+    $secondaryBrandColor: #E3DEB6;
+    $tertiaryBrandColor: #D31245;
+  } @else if $brandCode == hc {
+    $primaryBrandColor: #5BBBB7;
+    $secondaryBrandColor: #0089C4;
+    $tertiaryBrandColor: #D10074;
+  } @else if $brandCode == uf {
+    $primaryBrandColor: #FF4A00;
+    $secondaryBrandColor: #0021A5;
+  } @else if $brandCode == nd {
+    $primaryBrandColor: #000066;
+    $secondaryBrandColor: #F7E79C;
+  } @else if $brandCode == us {
+    $primaryBrandColor: #4A245E;
+    $secondaryBrandColor: #D1A217;
+    $tertiaryBrandColor: #D7D9DA;
+  } @else if $brandCode == ust {
+    $primaryBrandColor: #472986;
+    $secondaryBrandColor: #000000;
+    $tertiaryBrandColor: #5B5C5E;
+  } @else if $brandCode == sf {
+    $primaryBrandColor: #00543C;
+    $secondaryBrandColor: #FDBB30;
+  } @else if $brandCode == usf {
+    $primaryBrandColor: #006747;
+    $secondaryBrandColor: #CFC493;
+  } @else if $brandCode == uvm {
+    $primaryBrandColor: #36A100;
+  } @else if $brandCode == usnuc {
+    $primaryBrandColor: #162455;
+  } @else if $brandCode == usnud {
+    $primaryBrandColor: #B10B0D;
+    $secondaryBrandColor: #162455;
+  } @else if $brandCode == val {
+    $primaryBrandColor: #613318;
+    $secondaryBrandColor: #FFCC00;
+  } @else if $brandCode == vu {
+    $primaryBrandColor: #003366;
+    $secondaryBrandColor: #999999;
+  } @else {
+    $primaryBrandColor: #4A245E;
+    $secondaryBrandColor: #D1A217;
+    $tertiaryBrandColor: #D7D9DA;
+  }
+
+  $primaryColor: $primaryBrandColor;
+  $secondaryColor: $secondaryBrandColor;
+  $tertiaryColor: $tertiaryBrandColor;

@@ -1,0 +1,59 @@
+/*============================================
+  Fonts and Icons
+=============================================*/
+$primaryFont: sans-serif;
+$secondaryFont: 'abraham_lincolnregular';
+$lpIcons: 'lp-icons';
+$lpCircleIcons: 'lp-circle-icons';
+$icons: 'icons';
+
+@mixin font-size ($sizeValue) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+/*============================================
+  Colors
+=============================================*/
+  $primaryColor: #333;
+  $secondaryColor: rgb(0,255,255);
+
+/*============================================
+  Vendor Prefixes
+=============================================*/
+@mixin vendor-prefix ($name, $argument) {
+  #{$name}: $argument;
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
+}
+
+/*============================================
+  Grid
+=============================================*/
+$column-width: 6.25%;
+$gutter-width: 2.083%;
+$columns: 12;
+$total-width: ($column-width * $columns) + ($gutter-width * $columns);
+
+@mixin column ($x, $columns:$columns) {
+  $_gridsystem-width: ($column-width * $columns) + ($gutter-width * $columns);
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: $total-width * (((($gutter-width + $column-width) * $x) - $gutter-width) / $_gridsystem-width);
+  margin: 0 $total-width * (($gutter-width * .5) / $_gridsystem-width);
+}
+
+@mixin pull ($x, $columns:$columns) {
+  margin: 0 $total-width * (($gutter-width * .5) / $total-width) 0 0;
+}
+
+@mixin push ($x, $columns:$columns) {
+  margin: 0 0 0 $total-width * (($gutter-width * .5) / $total-width);
+}
+
+@mixin pushpullwidth ($x, $columns:$columns) {
+  width: ($total-width - ($gutter-width * 2)) * ((($gutter-width + $column-width) * $x) / $total-width);
+}

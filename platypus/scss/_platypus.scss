@@ -1,0 +1,95 @@
+$primaryColor: #00FFFF;
+$secondaryColor: #472986;
+
+.defualt {
+    margin: 1em 0;
+    position: relative;
+}
+
+.lead {
+    background: url(../images/platypus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 320px;
+}
+
+.form {
+    margin: $spacing;
+    padding: 10px;
+    position: relative;
+}
+
+.background {
+    background-color: $primaryColor;
+}
+
+button, input[type=submit], input[type=button] {
+    background: $secondaryColor;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px $secondaryColor * 1.5;
+    color: $white;
+    padding: .5em 1em;
+    position: relative;
+    @include vendor-prefix( transition, 0.3s );
+    &:hover {
+        border: none;
+        outline: none;
+        box-shadow: 0 4px $secondaryColor * 2;
+    }
+    &:active {
+        border: none;
+        outline: none;
+        top: 1px;
+        box-shadow: 0 2px $secondaryColor * 2, inset 0 1px 2px $black;
+        @include vendor-prefix( transition, 0.1s );
+    }
+}
+
+@if lightness($fontColor) > lightness($primaryColor) {
+        .form { color: $white; }
+    } @else {
+        .form { color: $fontColor; }
+    }
+
+ul {
+    padding: 0 0 0 20px;
+}
+
+@media (min-width: 20em) {
+
+}
+
+@media (min-width: 30em) {
+    .lead {
+        position: absolute;
+        width: 100%;
+    }
+    .primary {
+        margin-top: 2em;
+    }
+    .span8 {
+        .span8 {
+            margin-bottom: 2em;
+        }
+    }
+    blockquote {
+       color: $white;
+    }
+}
+
+@media (min-width: 50em) {
+    .lead {
+        min-height: 500px;
+    }
+    .primary {
+        margin-top: 17em;
+    }
+}
+
+@media (min-width: 60em) {
+    .lead {
+        background-position: 50%;
+    }
+}

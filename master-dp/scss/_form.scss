@@ -1,0 +1,24 @@
+.form {
+	padding: 10px 0;
+	position: relative;
+	max-width: 320px;
+}
+
+form {
+	padding: 10px;
+	position: relative;
+	max-width: 300px;
+	input[type=text], select {
+		border: none;
+		margin: 5px 0;
+		padding: 2%;
+		-webkit-appearance: none;
+		white-space: none;
+	}
+	input[type=text] {
+		width: 96%;
+	}
+	select {
+		width: 100%;
+	}
+}

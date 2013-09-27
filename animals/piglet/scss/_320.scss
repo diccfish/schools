@@ -1,0 +1,60 @@
+header {
+	aside {
+		width: 300px
+	}
+	section {
+		width: 300px;
+	}
+}
+
+main{
+	aside {
+		width: 300px;
+	}
+}
+
+.content {
+	width: 300px;
+	article {
+		width: 300px;
+	}
+	.form {
+		width: 300px;
+	}
+}
+
+form {
+	margin: 0;
+	padding: 10px;
+	width: 280px;
+	input[type=text], select {
+		border: none;
+		font: normal;
+		font-size: .8em;
+		line-height: normal;
+		margin: 5px 0;
+		padding: 5px;
+		-webkit-appearance: none;
+		white-space: none;
+	}
+	input[type=text] {
+		width: 125px;
+		&:nth-of-type(2n+1) {
+			margin-right: 7px;
+		}
+	}
+	select {
+		width: 280px;
+	}
+	progress, progress::-webkit-progress-bar {
+		background: #fff;
+		box-shadow: 0 0 2px #999;
+		border-radius: 5px;
+	} 
+	progress::-webkit-progress-value {
+		background: #A537FD;
+	}
+	button {
+
+	}
+}

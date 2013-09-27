@@ -1,0 +1,135 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	section {
+		background: rgba(0,0,0,0.13);
+		height: 50px;
+		margin: 0 auto 30px;
+		width: 100%;
+	}
+	.logo {
+		background: rgb(0,255,255);
+		height: 50px;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+main {
+	color: $black;
+	font-family: sans-serif;
+	font-weight: normal;
+	position: relative;
+	section {
+		position: relative;
+	}
+	article {
+		margin: 0 auto;
+		position: relative;
+		width: 90%;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.clearfix {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	&:after {
+		content: "";
+		clear: both;
+	}
+}
+
+.page-title {
+	background: rgba(0,0,0,0.35);
+	color: #fff;
+	font-size: 3em;
+	left: 0;
+	margin: 0;
+	padding: 10px 2%;
+	position: absolute;
+	top: 2em;
+	width: 96%;
+	z-index: 99;
+}
+
+.form {
+	margin: 0 auto;
+	padding: 10px 0;
+	position: relative;
+	width: 95%;
+}
+
+form {
+	background: rgba(0,255,255,0.6);
+	padding: 5%;
+	position: relative;
+	width: 90%;
+	input[type=text], select {
+		border: none;
+		font: normal;
+		font-size: .8em;
+		line-height: normal;
+		margin: 5px 0;
+		padding: 2%;
+		-webkit-appearance: none;
+		white-space: none;
+	}
+	input[type=text] {
+		width: 96%;
+	}
+	select {
+		width: 100%;
+	}
+	input[type=submit], button {
+		background: $ustPurple;
+		border-radius: 5px;
+		border: none;
+		color: $white;
+		font-size: 1.6rem;
+		padding: 5px 15px;
+	}
+	progress, progress::-webkit-progress-bar {
+		background: #fff;
+		box-shadow: 0 0 2px #999;
+		border-radius: 5px;
+	} 
+	progress::-webkit-progress-value {
+		background: orange;
+		border-radius: 5px;
+	}
+}
+
+aside { 
+	width: 100%;
+	article  {
+		background: #999;
+		height: 200px;
+		width: 100%;
+		&:before {
+			background: rgba(255,255,255,0.3);
+			border-radius: 50%;
+	        content: "";
+	        height: 60px;
+	        left: 120px;
+	        position: absolute;
+	        width: 60px;
+	        top: 70px;
+	    }
+	    &:after {
+			border-top: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+			border-left: 30px solid #fff;
+	        content: "";
+	        left: 140px;
+	        position: absolute;
+	        top: 80px;
+	    }
+	}
+}

@@ -1,0 +1,271 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5);
+}
+header aside {
+  background: cyan;
+  height: 80px;
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+}
+header section {
+  color: #fff;
+  line-height: 1.5em;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+  color: #333;
+  font-weight: normal;
+  position: relative;
+}
+main section {
+  position: relative;
+}
+main article {
+  position: relative;
+}
+main aside {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+main aside img {
+  display: none;
+}
+
+.content {
+  margin: 0 auto;
+  position: relative;
+  width: 95%;
+}
+.content article {
+  margin: 0 auto;
+  width: 100%;
+}
+.content .form {
+  background: #00EBBE;
+  color: #000;
+  width: 100%;
+}
+
+form {
+  margin: 0 auto;
+  padding: 5%;
+  position: relative;
+  width: 90%;
+}
+form input[type=text], form select {
+  border: none;
+  font: normal;
+  font-size: .8em;
+  line-height: normal;
+  margin: 5px 0;
+  padding: 2%;
+  -webkit-appearance: none;
+  white-space: none;
+}
+form input[type=text] {
+  width: 96%;
+}
+form select {
+  width: 100%;
+}
+form progress, form progress::-webkit-progress-bar {
+  background: #fff;
+  box-shadow: 0 0 2px #999;
+  border-radius: 5px;
+}
+form progress::-webkit-progress-value {
+  background: #A537FD;
+}
+
+@media (min-width: 320px) {
+  header aside {
+    width: 300px;
+  }
+  header section {
+    width: 300px;
+  }
+
+  main aside {
+    width: 300px;
+  }
+
+  .content {
+    width: 300px;
+  }
+  .content article {
+    width: 300px;
+  }
+  .content .form {
+    width: 300px;
+  }
+
+  form {
+    margin: 0;
+    padding: 10px;
+    width: 280px;
+  }
+  form input[type=text], form select {
+    border: none;
+    font: normal;
+    font-size: .8em;
+    line-height: normal;
+    margin: 5px 0;
+    padding: 5px;
+    -webkit-appearance: none;
+    white-space: none;
+  }
+  form input[type=text] {
+    width: 125px;
+  }
+  form input[type=text]:nth-of-type(2n+1) {
+    margin-right: 7px;
+  }
+  form select {
+    width: 280px;
+  }
+  form progress, form progress::-webkit-progress-bar {
+    background: #fff;
+    box-shadow: 0 0 2px #999;
+    border-radius: 5px;
+  }
+  form progress::-webkit-progress-value {
+    background: #A537FD;
+  }
+}
+@media (min-width: 480px) {
+  header aside {
+    width: 460px;
+  }
+  header section {
+    line-height: 2em;
+    width: 460px;
+  }
+
+  main aside {
+    width: 460px;
+  }
+
+  .content {
+    width: 480px;
+  }
+  .content article {
+    width: 460px;
+  }
+}
+@media (min-width: 685px) {
+  header {
+    margin: 0 auto;
+    width: 685px;
+  }
+  header aside, header section {
+    display: inline-block;
+    margin: 10px 0;
+    vertical-align: middle;
+  }
+  header aside {
+    margin-left: 10px;
+    width: 300px;
+  }
+  header section {
+    line-height: 80px;
+    width: 370px;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 685px;
+  }
+  main aside {
+    float: left;
+    width: 300px;
+  }
+  main aside img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .content {
+    float: left;
+    width: 365px;
+  }
+  .content article {
+    width: 355px;
+  }
+  .content .form {
+    float: left;
+    width: 320px;
+  }
+}
+@media (min-width: 760px) {
+  header {
+    width: 760px;
+  }
+  header aside {
+    width: 300px;
+  }
+  header section {
+    width: 445px;
+  }
+
+  main {
+    width: 760px;
+  }
+  main aside {
+    float: left;
+    width: 300px;
+  }
+
+  .content {
+    float: right;
+    width: 440px;
+  }
+  .content article {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 960px) {
+  header {
+    width: 960px;
+  }
+  header aside {
+    margin: 0 25px;
+    width: 300px;
+  }
+  header section {
+    border-left: 2px solid #fff;
+    line-height: 100px;
+    margin: 0;
+    position: relative;
+    width: 604px;
+  }
+  header section:before {
+    background: #7ab800;
+    bottom: 0;
+    content: "";
+    height: 60px;
+    left: 0;
+    position: absolute;
+    width: 60px;
+  }
+
+  main {
+    width: 960px;
+  }
+
+  .content {
+    width: 640px;
+  }
+}
