@@ -1,7 +1,9 @@
 /*== Brand Colors ==*/
-  $primaryBrandColor: #000;
-  $secondaryBrandColor: #fff;
-  $tertiaryBrandColor: #ccc;
+  $primaryBrandColor: null;
+  $secondaryBrandColor: null;
+  $tertiaryBrandColor: null;
+  $quaternaryBrandColor: null;
+  $knockoutBrandColor: none;
 
   $brandCode: ua !default;
 
@@ -31,8 +33,8 @@
     $primaryBrandColor: #18453B;
   } @else if $brandCode == nec {
     $primaryBrandColor: #002D6A;
-    $secondaryBrandColor: #E3DEB6;
-    $tertiaryBrandColor: #D31245;
+    $secondaryBrandColor: #D31245;
+    $tertiaryBrandColor: #E3DEB6;
   } @else if $brandCode == hc {
     $primaryBrandColor: #5BBBB7;
     $secondaryBrandColor: #0089C4;
@@ -43,10 +45,12 @@
   } @else if $brandCode == nd {
     $primaryBrandColor: #000066;
     $secondaryBrandColor: #F7E79C;
+    $tertiaryBrandColor:#fff;
   } @else if $brandCode == us {
     $primaryBrandColor: #4A245E;
     $secondaryBrandColor: #D1A217;
     $tertiaryBrandColor: #D7D9DA;
+    $quaternaryBrandColor: #231f20;
   } @else if $brandCode == ust {
     $primaryBrandColor: #472986;
     $secondaryBrandColor: #000000;
@@ -79,3 +83,27 @@
   $primaryColor: $primaryBrandColor;
   $secondaryColor: $secondaryBrandColor;
   $tertiaryColor: $tertiaryBrandColor;
+  $quaternaryColor: $quaternaryBrandColor;
+  $knockout: $knockoutBrandColor;
+
+.#{$brandCode} .primarycolor { fill: $primaryColor; }
+.#{$brandCode} .secondarycolor { fill: $secondaryColor; }
+.#{$brandCode} .tertiarycolor { fill: $tertiaryColor; }
+.#{$brandCode} .quaternarycolor { fill: $quaternaryColor; }
+.logo {
+  .black {
+    .#{$brandCode} {
+      .primarycolor, .secondarycolor, .tertiarycolor, .quaternarycolor { fill: $black; }
+    }
+  }
+  .white {
+    .#{$brandCode} {
+      .primarycolor, .secondarycolor, .tertiarycolor, .quaternarycolor { fill: $white; }
+    }
+  }
+  .white, .black, .primary, .secondary {
+    .#{$brandCode} .knockout { 
+      fill: $knockout; 
+    }
+  }
+}

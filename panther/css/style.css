@@ -1,0 +1,172 @@
+/*============================================
+  Vendor Prefixes
+=============================================*/
+@-webkit-keyframes threats {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 10%;
+  }
+}
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 400ms;
+  -webkit-transition: opacity 400ms;
+  -ms-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  -o-transition: opacity 400ms;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+}
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a {
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+}
+.onepage-pagination li a:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+}
+.onepage-pagination li a.active:before {
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}
+
+h1 {
+  color: #00a595;
+  font-family: 'Gruppo', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+article {
+  background: #f9d0bc;
+  font-family: helvetica, sans-serif;
+}
+
+div {
+  color: #333;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.panther {
+  background-image: url(../img/panther.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+}
+.panther h1 {
+  font-size: 3em;
+}
+
+iframe {
+  min-height: 70vh;
+  width: 100%;
+}
+
+.threats.active .humans {
+  vertical-align: bottom;
+}
+.threats.active .humans span {
+  background: #00a595;
+  display: block;
+  width: 20%;
+}
+.threats.active .humans span:nth-of-type(5n+1) {
+  height: 20vh;
+  animation: threats 2s linear 1s;
+  -webkit-animation: threats 2s linear 1s;
+  -ms-animation: threats 2s linear 1s;
+  -moz-animation: threats 2s linear 1s;
+  -o-animation: threats 2s linear 1s;
+}
+
+.map div {
+  margin: 10vh auto 0 auto;
+  position: relative;
+  height: 75vh;
+}
+.map h1 {
+  margin-bottom: .5em;
+}
+.map .areaExplained {
+  color: #ee6363;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 50vh;
+}
+.map .florida, .map .panther-territory {
+  position: absolute;
+  height: 100%;
+}
+.map .florida:hover ~ .areaExplained, .map .panther-territory:hover ~ .areaExplained {
+  display: block;
+}
+.map .florida {
+  fill: #000;
+}
+.map .panther-territory {
+  fill: #ee6363;
+  z-index: 999;
+}
+
+@media (min-width: 60em) {
+  h1 {
+    font-size: 3em;
+  }
+
+  div {
+    line-height: 1.75em;
+  }
+
+  .panther h1 {
+    font-size: 4.5em;
+  }
+}

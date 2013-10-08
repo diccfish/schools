@@ -12,6 +12,12 @@ $secondaryColor: #472986;
     background-repeat: no-repeat;
     background-position: top center;
     min-height: 320px;
+    position: absolute;
+    width: 100%;
+}
+
+.headline {
+    min-height: 300px;
 }
 
 .form {
@@ -57,39 +63,29 @@ ul {
     padding: 0 0 0 20px;
 }
 
-@media (min-width: 20em) {
-
-}
-
 @media (min-width: 30em) {
-    .lead {
-        position: absolute;
-        width: 100%;
-    }
-    .primary {
-        margin-top: 2em;
-    }
-    .span8 {
-        .span8 {
-            margin-bottom: 2em;
-        }
-    }
-    blockquote {
-       color: $white;
-    }
+
 }
 
-@media (min-width: 50em) {
+@media (min-width: 735px) {
     .lead {
         min-height: 500px;
     }
-    .primary {
-        margin-top: 17em;
+    .headline {
+        min-height: 460px;
+        margin: 40px 0 0;
+    }
+    .form {
+        margin-top: 260px;
     }
 }
 
 @media (min-width: 60em) {
     .lead {
         background-position: 50%;
+    }
+    .headline {
+        margin-top: 260px;
+        min-height: 240px;
     }
 }

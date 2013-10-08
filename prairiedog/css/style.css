@@ -380,14 +380,14 @@ table {
   Fonts and Icons
 =============================================*/
 /*============================================
+  Vendor Prefixes
+=============================================*/
+/*============================================
   Colors
 =============================================*/
 /*== Generic Colors ==*/
 /*============================================
   Margins
-=============================================*/
-/*============================================
-  Vendor Prefixes
 =============================================*/
 /*============================================
   Grid
@@ -606,8 +606,8 @@ table {
 =============================================*/
 @font-face {
   font-family: "icons";
-  src: url("../fonts/fonts/icons.eot");
-  src: url("../fonts/fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/fonts/icons.woff") format("woff"), url("../fonts/fonts/icons.ttf") format("truetype"), url("../fonts/fonts/icons.svg#icons") format("svg");
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -998,24 +998,6 @@ nav li {
   margin: 0 2.08% 1em 0;
 }
 
-.video {
-  position: relative;
-}
-.video object, .video iframe {
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.video img {
-  position: relative;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-
 /* Form */
 form {
   position: relative;
@@ -1140,6 +1122,16 @@ form .steps-indicator .bar {
   height: 100%;
 }
 
+.background {
+  opacity: .6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
 /* Labels Inside */
 /* hide labels first */
 label {
@@ -1182,35 +1174,20 @@ form div[data-stepid] label{text-align:left;}*/
 
 .field-validation-error {
   background-color: #b11116;
-  content: "&#88";
-  color: white;
   display: block;
   font-weight: bold;
-  height: 15px;
-  left: -16px;
+  height: 16px;
+  left: -10px;
   top: 18px;
   position: absolute;
   padding-left: 5px;
-  width: 8px;
+  width: 5px;
   z-index: 998;
 }
-
-.checkboxfield .field-validation-error {
-  top: 0;
-}
-
-.labelsInside .field-validation-error {
-  top: .5em;
-}
-
-.radiofield .field-validation-error {
-  top: 16px;
-}
-
 .field-validation-error span {
-  border-top: 7px solid transparent;
+  border-top: 8px solid transparent;
   border-left: 8px solid #b11116;
-  border-bottom: 9px solid transparent;
+  border-bottom: 8px solid transparent;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -1218,6 +1195,28 @@ form div[data-stepid] label{text-align:left;}*/
   top: 0;
   width: 0;
   text-indent: -9000px;
+}
+
+.checkboxfield .field-validation-error {
+  top: 0;
+}
+
+.labelsInside .field-validation-error {
+  top: .6em;
+}
+
+.radiofield .field-validation-error {
+  top: 16px;
+}
+
+#form .field-validation-error-messaging {
+  height: auto;
+}
+
+.field-validation-error-messaging h6, #form .field-validation-error-messaging h6 {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .field-validation-error-messaging {
@@ -1233,17 +1232,6 @@ form div[data-stepid] label{text-align:left;}*/
   position: relative;
   width: 90%;
 }
-
-#form .field-validation-error-messaging {
-  height: auto;
-}
-
-.field-validation-error-messaging h6, #form .field-validation-error-messaging h6 {
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .field-validation-error-messaging ul {
   margin: 5px 0 0 5px;
   column-width: 150px;
@@ -1252,11 +1240,9 @@ form div[data-stepid] label{text-align:left;}*/
   -moz-column-width: 150px;
   -o-column-width: 150px;
 }
-
 .field-validation-error-messaging li {
   color: #333;
 }
-
 .field-validation-error-messaging .arrow {
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
@@ -1269,7 +1255,6 @@ form div[data-stepid] label{text-align:left;}*/
   position: absolute;
   width: 0;
 }
-
 .field-validation-error-messaging .arrow span {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
@@ -1289,11 +1274,13 @@ form div[data-stepid] label{text-align:left;}*/
   display: none;
 }
 
-img {
-  width: 100%;
+/*============================================
+  Header
+=============================================*/
+header {
+  position: relative;
 }
 
-/*--- Header ----*/
 .logo {
   height: 80px;
 }
@@ -1303,7 +1290,7 @@ img {
 }
 
 .logocolor {
-  fill: #001d5f;
+  fill: black;
 }
 
 .tagline {
@@ -1311,24 +1298,52 @@ img {
   text-align: center;
 }
 
-/*--- Concept ----*/
-blockquote {
-  color: #404040;
-  margin: 2.5em 0;
+/*============================================
+  Headlines
+=============================================*/
+.headline {
+  color: white;
+  margin: 1em 0;
 }
 
-/*--- Background Opacity ----*/
-.background {
-  opacity: .6;
+/*============================================
+  Page Sections
+=============================================*/
+.lead, .defualt, .primary, .secondary {
+  position: relative;
+}
+
+/*============================================
+  Images
+=============================================*/
+img {
+  width: 100%;
+}
+
+/*============================================
+  Videos
+=============================================*/
+.video {
+  position: relative;
+}
+.video object, .video iframe, .video div, .video embed {
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.video img {
+  position: relative;
+  z-index: -1;
   height: 100%;
   width: 100%;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
 }
 
-/*--- Button ----*/
+/*============================================
+  Buttons
+=============================================*/
 button, input[type=submit] {
   border: none;
   cursor: pointer;
@@ -1342,7 +1357,239 @@ button, input[type=submit] {
   -o-transition: 0.3s;
 }
 
-/*--- Grid ----*/
+.flat {
+  background: #ffdd00;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px yellow;
+  padding: .5em 1em;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.flat:hover {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px yellow;
+}
+.flat:active {
+  border: none;
+  outline: none;
+  top: 1px;
+  box-shadow: 0 2px yellow, inset 0 1px 2px black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.simple {
+  background: #ffdd00;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px yellow;
+  padding: .5em 1em;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.simple:hover {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px yellow;
+}
+.simple:active {
+  border: none;
+  outline: none;
+  top: 1px;
+  box-shadow: 0 2px yellow, inset 0 1px 2px black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.gel {
+  background: #ffdd00;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px yellow;
+  padding: .5em 1em;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.gel:hover {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px yellow;
+}
+.gel:active {
+  border: none;
+  outline: none;
+  top: 1px;
+  box-shadow: 0 2px yellow, inset 0 1px 2px black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.glass {
+  background: #ffdd00;
+  border: 1px solid #ccb100;
+  box-shadow: inset 0 2px #fff199, inset 0 1em #ffe433, inset 0 1em 1.5em #ffeb66, inset 0 -1.25em 2em #ccb100;
+  /* Dark Background */
+  padding: .5em 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: #665800;
+  color: white;
+}
+.glass:active {
+  border: none;
+  outline: none;
+  top: 1px;
+  box-shadow: 0 2px yellow, inset 0 1px 2px black;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+/*============================================
+  Slider
+=============================================*/
+.swipe {
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  backface-visiblility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.swipe-wrap > div {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+/*============================================
+  Target Fix
+=============================================*/
+.target-fix {
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-indent: -99999px;
+}
+
+/*============================================
+  Accordion
+=============================================*/
+.accordion {
+  display: block;
+  margin: 1em 0;
+}
+.accordion a {
+  padding-left: 1em;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #ffdd00;
+  border: 1px solid white;
+  box-shadow: 0 1px 1px #bfbfbf;
+  line-height: 3em;
+  height: 3em;
+  display: block;
+  position: relative;
+}
+[id*="open-accordion"]:hover, [id*="close-accordion"]:hover {
+  text-decoration: none;
+}
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  position: absolute;
+  right: .5em;
+  top: 1em;
+  z-index: 999;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid rgba(64, 64, 64, 0.6);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion-content {
+  border: 1px solid #ffdd00;
+  display: block;
+  /* < IE 8 fix. Shows the accordions open */
+  margin: 0 auto;
+  padding: 0 1%;
+  position: relative;
+  width: 95%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}
+
+/* Browsers read this and allow for accordion effect. IE 8 ignores this. */
+:root * > .accordion-content {
+  display: none;
+}
+
+.accordion div:target ~ .accordion-content {
+  display: block;
+  padding: 1em;
+}
+.accordion div:target ~ [id*="close-accordion"] {
+  display: block;
+}
+.accordion div:target ~ [id*="open-accordion"] {
+  display: none;
+}
+.accordion div:target ~ [id*="close-accordion"]:after {
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #404040;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+/*============================================
+  Grid
+=============================================*/
 .span1 {
   display: inline;
   float: left;
@@ -1498,27 +1745,40 @@ button, input[type=submit] {
   clear: both;
 }
 
-@media (min-width: 383px) {
+/*============================================
+  Footer
+=============================================*/
+footer, .footer {
+  margin: 1em 0;
+  margin-bottom: 3em;
+  text-align: center;
+}
+footer .copyright, .footer .copyright {
+  font-size: .875em;
+  margin: 1em 0;
+}
+
+@media (min-width: 23.9375em) {
   .span12, .container {
     max-width: 326px;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 28.1875em) {
   .span12, .container {
     max-width: 383px;
   }
 }
-@media (min-width: 531px) {
+@media (min-width: 33.1875em) {
   .span12, .container {
     max-width: 451px;
   }
 }
-@media (min-width: 625px) {
+@media (min-width: 39.0625em) {
   .span12, .container {
     max-width: 531px;
   }
 }
-@media (min-width: 735px) {
+@media (min-width: 45.9375em) {
   .span1 {
     display: inline;
     float: left;
@@ -1655,13 +1915,17 @@ button, input[type=submit] {
   .spread .span12 {
     width: 97.913%;
   }
+
+  footer, .footer {
+    text-align: left;
+  }
 }
-@media (min-width: 864px) {
+@media (min-width: 54em) {
   .span2 {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 39.582%;
+    width: 22.916%;
     margin: 0 1.0415%;
   }
 
@@ -1669,7 +1933,7 @@ button, input[type=submit] {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 39.582%;
+    width: 22.916%;
     margin: 0 1.0415%;
   }
 
@@ -1678,6 +1942,22 @@ button, input[type=submit] {
     float: left;
     overflow: hidden;
     width: 39.582%;
+    margin: 0 1.0415%;
+  }
+
+  .span5 {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 39.582%;
+    margin: 0 1.0415%;
+  }
+
+  .span7 {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 56.248%;
     margin: 0 1.0415%;
   }
 
@@ -1693,7 +1973,7 @@ button, input[type=submit] {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 56.248%;
+    width: 72.914%;
     margin: 0 1.0415%;
   }
 
@@ -1701,7 +1981,7 @@ button, input[type=submit] {
     display: inline;
     float: left;
     overflow: hidden;
-    width: 56.248%;
+    width: 72.914%;
     margin: 0 1.0415%;
   }
 
@@ -1710,25 +1990,39 @@ button, input[type=submit] {
   }
 
   .spread .span2 {
-    width: 40.79708%;
+    width: 24.47825%;
   }
   .spread .span3 {
-    width: 40.79708%;
+    width: 24.47825%;
   }
   .spread .span4 {
     width: 40.79708%;
+  }
+  .spread .span5 {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 39.582%;
+    margin: 0 1.0415%;
+  }
+  .spread .span7 {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 56.248%;
+    margin: 0 1.0415%;
   }
   .spread .span8 {
     width: 57.11592%;
   }
   .spread .span9 {
-    width: 57.11592%;
+    width: 73.43475%;
   }
   .spread .span10 {
-    width: 57.11592%;
+    width: 73.43475%;
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 60em) {
   .tagline {
     text-align: right;
   }
@@ -1754,30 +2048,6 @@ button, input[type=submit] {
     float: left;
     overflow: hidden;
     width: 31.249%;
-    margin: 0 1.0415%;
-  }
-
-  .span5 {
-    display: inline;
-    float: left;
-    overflow: hidden;
-    width: 39.582%;
-    margin: 0 1.0415%;
-  }
-
-  .span6 {
-    display: inline;
-    float: left;
-    overflow: hidden;
-    width: 47.915%;
-    margin: 0 1.0415%;
-  }
-
-  .span7 {
-    display: inline;
-    float: left;
-    overflow: hidden;
-    width: 56.248%;
     margin: 0 1.0415%;
   }
 
@@ -1846,9 +2116,14 @@ button, input[type=submit] {
     width: 97.913%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 66em) {
   .span12, .container {
-    max-width: 1088px;
+    max-width: 960px;
+  }
+}
+@media (min-width: 75.875em) {
+  .span12, .container {
+    max-width: 69em;
   }
 }
 body {

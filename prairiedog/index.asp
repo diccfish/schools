@@ -21,8 +21,8 @@
             </div>
             <div class="secondary">
             	<div class="span8">
-                    <h1>hl - Prairie Dog rhoncus nisi sed dui iaculis</h1>
-                    <h2>sh - Nulla rhoncus nisi sed dui iaculis volutpat</h2>
+                    <h1>hl - Prairie Dog Once Lived in D.C.</h1>
+                    <h2>sh - today he is just a rat</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis nulla a mauris consequat euismod. Maecenas eget arcu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pharetra rhoncus velit, at suscipit nisl malesuada non. Praesent porta, nisl sit amet elementum ultricies, nunc diam convallis felis, in pulvinar eros lacus in nisi. Praesent rhoncus accumsan tempor. Sed lectus elit, bibendum in porta vitae, condimentum eu sem.</p>
                     <h2>h2 - Vestibulum pharetra rhoncus velit Lorem ipsum dolor sit amet, consectetur adipiscing eli eget arcu sapien</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis nulla a mauris consequat euismod. Maecenas eget arcu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pharetra rhoncus velit, at suscipit nisl malesuada non. Praesent porta, nisl sit amet elementum ultricies, nunc diam convallis felis, in pulvinar eros lacus in nisi. Praesent rhoncus accumsan tempor. Sed lectus elit, bibendum in porta vitae, condimentum eu sem.</p>

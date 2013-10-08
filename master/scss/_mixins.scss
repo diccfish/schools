@@ -7,9 +7,46 @@ $lpIcons: 'lp-icons';
 $lpCircleIcons: 'lp-circle-icons';
 $icons: 'icons';
 
+// font size in px for old browsers
+// font size in rem for new browsers
 @mixin font-size ($sizeValue) {
   font-size: $sizeValue + px;
   font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin arrow-right ($size, $color) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+}
+
+@mixin arrow-left ($size, $color) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+}
+
+@mixin arrow-up ($size, $color) {
+    border-bottom: $size solid transparent;
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
+}
+
+@mixin arrow-down ($size, $color) {
+    border-bottom: $size solid transparent;
+    border-top: $size solid transparent;
+    border-left: $size solid $color;
+}
+
+/*============================================
+  Vendor Prefixes
+=============================================*/
+@mixin vendor-prefix ($name, $argument) {
+  #{$name}: $argument;
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
 }
 
 /*============================================
@@ -21,6 +58,7 @@ $icons: 'icons';
   $tertiaryColor: #E86D1F;
   $quaternaryColor: #00ffff;
   $quinaryColor: #fa5010;
+  $knockout: none;
   $black: #000;
   $white: #fff;
   $lightGrey: lighten($black, 75%);
@@ -35,25 +73,128 @@ $icons: 'icons';
   $mediumbeige: #B9AB96;
   $darkbeige: #948772;
   $black7c: #2E2D27;
-
   $fontColor: #333;
   
+/*============================================
+  Gradient
+=============================================*/  
+@mixin gradient($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+}
+
+/*============================================
+  Accordion
+=============================================*/
+@mixin basic-accordion {
+  .accordion {
+    display: block;
+    margin: $spacing;
+  }
+
+  [id*="open-accordion"], [id*="close-accordion"] {
+    display: block;
+    position: relative;
+	margin: .25em 0;
+	&:before{margin-right: .4em; font-size: .85em;} 
+  }
+
+  [id*="open-accordion"] {
+	&:before{content:"[+]";} 
+  }
+  [id*="close-accordion"] {
+    display: none;
+	&:before{content:"[–]";}
+  }
+
+  .accordion-content {
+    display: block; /* < IE 8 fix. Shows the accordions open */
+	margin: .25em 0;
+    position: relative;
+    @include vendor-prefix (transition, all 0.1s ease);
+  }
+
+  /* Browsers read this and allow for accordion effect. IE 8 ignores this. */
+  :root *> .accordion-content {
+    display: none;
+  }
+
+  .accordion div:target {
+    &~ .accordion-content {
+      display: block;
+    }
+    &~ [id*="close-accordion"] { 
+      display: block; 
+    }
+    &~ [id*="open-accordion"] { 
+      display: none; 
+    }
+  }
+}
+
+@mixin fancy-accordion ($bgcolor, $bordercolor, $arrowcolor) {
+  @include basic-accordion;
+  [id*="open-accordion"], [id*="close-accordion"] {
+    background: $bgcolor;
+    border: 1px solid $bordercolor;
+    box-shadow: 0 1px 1px $lightGrey;
+    line-height: 3em;
+    height: 3em;
+    padding: 0 1%;
+    &:hover {
+      text-decoration: none;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: .5em;
+      top: 1em;
+      z-index: 999;
+      @include arrow-left (1em, rgba($arrowcolor, 0.6));
+      @include vendor-prefix (transform, rotate(90deg));
+    }
+  }
+
+  [id*="close-accordion"] {
+    display: none;
+  }
+
+  .accordion-content {
+    border: 1px solid $bordercolor;
+    padding: 0 1%;
+  }
+
+  /* Browsers read this and allow for accordion effect. IE 8 ignores this. */
+  :root *> .accordion-content {
+    display: none;
+  }
+
+  .accordion div:target {
+    &~ .accordion-content {
+      display: block;
+      padding: 1em;
+    }
+    &~ [id*="close-accordion"] { 
+      display: block; 
+    }
+    &~ [id*="open-accordion"] { 
+      display: none; 
+    }
+    &~ [id*="close-accordion"]:after {
+      @include arrow-left (1em, rgba($arrowcolor, 1));
+      @include vendor-prefix (transform, rotate(0deg));
+    }
+  }
+}
+
 
 /*============================================
   Margins
 =============================================*/
   $spacing: 1em 0;
-
-/*============================================
-  Vendor Prefixes
-=============================================*/
-@mixin vendor-prefix ($name, $argument) {
-  #{$name}: $argument;
-  -webkit-#{$name}: $argument;
-  -ms-#{$name}: $argument;
-  -moz-#{$name}: $argument;
-  -o-#{$name}: $argument;
-}
 
 /*============================================
   Grid
@@ -82,4 +223,8 @@ $total-width: ($column-width * $columns) + ($gutter-width * $columns);
 
 @mixin pushpullwidth ($x, $columns:$columns) {
   width: ($total-width - $gutter-width) * ((($gutter-width + $column-width) * $x) / $total-width);
+}
+
+@mixin border ($argument) {
+  box-shadow: $argument;
 }

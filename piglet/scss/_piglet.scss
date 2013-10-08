@@ -1,33 +1,18 @@
-$primaryColor: #00FFFF;
-$secondaryColor: #472986;
-
 header {
     background: $lightGrey;
-    position: relative;
 }
 
-.logo {
-    height: 50px;
-    margin: 0;
-    padding: 10px 0;
-    position: relative;
-    a {
-        display: block;
-    }
-    img {
-        display: block;
-        margin: 0 auto;
-        width: auto;
-    }
-}
-
-.lead {
+.default {
     margin: 2em 0;
 }
 
 .form {
-    background: rgba($primaryColor, 0.7);
+    position: relative;
     padding: 10px;
+}
+
+.background {
+    background: $primaryColor;
 }
 
 ul {
@@ -45,9 +30,9 @@ ul {
 
 @media (min-width: 60em) {
     .logo {
-        border-right: 2px solid #fff;
+        @include border (2px 0 $white);
      }
-     .lead {
+     .default {
         margin: 2em 0;
         .container {
             overflow: visible;
@@ -59,7 +44,7 @@ ul {
                     content: "";
                     height: 4em;
                     position: absolute;
-                    right: -1.25em;
+                    right: -2em;
                     top: -4em;
                     width: 4em;
                     z-index: 999;

@@ -13,13 +13,14 @@
     <div class="lead">
         <div class="container">
             <div class="span7">
-                <blockquote>
-                    <h1>HL - Pangolin is an armored animal</h1>
-                    <h3>SH - Vestibulum pharetra rhoncus velit</h3>
-                </blockquote>
+                <div class="headline">
+                    <h1>HL - Pangolin is an arm ored animal</h1>
+                    <h3>SH --- Many arms made of ore</h3>
+                </div>
             </div>
             <div class="span5">
                 <div class="form">
+                    <div class="background"></div>
                     <!-- #include file="../master/includes/form.asp"-->
                 </div>
             </div>

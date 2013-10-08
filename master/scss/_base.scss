@@ -1,29 +1,190 @@
+/*============================================
+  Header
+=============================================*/
+header { position: relative; }
+.logo { height: 80px; 
+  object, img, svg { height: 100%; width: auto; }
+}
+.tagline { line-height: 20px; text-align: center; }
+.knockout {fill:none;}
+
+/*============================================
+  Headlines
+=============================================*/
+.headline { color: $white; margin: $spacing; }
+
+/*============================================
+  Page Sections
+=============================================*/
+.lead, .defualt, .primary, .secondary { position: relative; }
+
+/*============================================
+  Images
+=============================================*/
 img { width: 100%; }
 
-/*--- Header ----*/
-.logo { height: 80px; 
-	object, img { height: 100%; width: auto; }
+/*============================================
+  Videos
+=============================================*/
+.video{
+  position:relative;
+  object, iframe, div, embed{height:100%; position:absolute; left:0; top:0; width:100%; z-index:1;}
+  img{position:relative; z-index:-1; height:100%; width:100%;}
 }
-.logocolor { fill: $primaryColor; }
-.tagline { line-height: 80px; text-align: center; }
 
-/*--- Concept ----*/
-blockquote { color: $darkGrey; margin: 2.5em 0; }
-
-/*--- Background Opacity ----*/
-.background{ opacity: .6; position:absolute; left:0; top:0; height:100%; width:100%; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; }
-
-/*--- Button ----*/
+/*============================================
+  Buttons
+=============================================*/
 button, input[type=submit] { 
 	border: none; 
 	cursor: pointer;
 	font-family: inherit;
-	margin: $spacing;
 	outline: none;
 	@include vendor-prefix (transition, 0.3s);
 }
 
-/*--- Grid ----*/
+
+@mixin flat($secondaryColor){
+    background: $secondaryColor;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px $secondaryColor * 1.5;
+    padding: .5em 1em;
+    position: relative;
+    @include vendor-prefix( transition, 0.3s );
+    &:hover {
+        border: none;
+        outline: none;
+        box-shadow: 0 4px $secondaryColor * 2;
+    }
+    &:active {
+        border: none;
+        outline: none;
+        top: 1px;
+        box-shadow: 0 2px $secondaryColor * 2, inset 0 1px 2px $black;
+        @include vendor-prefix( transition, 0.1s );
+    }
+}
+.flat{@include flat($secondaryColor)}
+
+@mixin gel($secondaryColor) {
+	@include gradient(lighten($secondaryColor, 6%), darken($secondaryColor, 6%));
+    border-top: 1px solid lighten($secondaryColor, 8%);
+    border-left: 1px solid lighten($secondaryColor, 8%);
+    border-right: 1px solid darken($secondaryColor, 8%);
+    border-bottom: 1px solid darken($secondaryColor, 8%);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px $lightGrey;
+    padding: .5em 1em;
+	font-weight:bold;
+    @if lightness($fontColor) > lightness($secondaryColor) {
+		color: $white;
+	} @else {
+		color: $fontColor;
+	}
+    &:hover {
+		box-shadow:none;
+    }
+    &:active {
+
+    }
+}
+.gel{@include gel($secondaryColor)}
+
+@mixin simple($secondaryColor) {
+    background: $secondaryColor;
+    border: 1px solid $secondaryColor;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px $lightGrey;
+    padding: .5em 1em;
+	font-weight:bold;
+    @if lightness($fontColor) > lightness($secondaryColor) {
+		color: $white;
+	} @else {
+		color: $fontColor;
+	}
+    &:hover {
+		box-shadow:none;
+    }
+    &:active {
+
+    }
+}
+.simple{@include simple($secondaryColor)}
+
+@mixin glass($secondaryColor) {
+    background: $secondaryColor;
+    border: 1px solid darken($secondaryColor, 10%);
+    box-shadow:
+        inset 0 .1em lighten($secondaryColor, 48%),
+        inset 0 1em lighten($secondaryColor, 16%),
+        inset 0 1em 1.5em lighten($secondaryColor, 16%),
+        inset 0 -1.25em 2em darken($secondaryColor, 6%);
+    padding: .25em 1em;
+	text-transform:uppercase;
+	font-size:1.25em;
+	font-weight:bold;
+	text-shadow:-1px -1px 0 darken($secondaryColor, 6%), 
+        1px -1px 0 darken($secondaryColor, 6%), 
+        -1px 1px 0 darken($secondaryColor, 6%), 
+        1px 1px 0 darken($secondaryColor, 6%);
+    @if lightness($fontColor) < lightness($secondaryColor) {
+		color: $white;
+	} @else {
+		color: $fontColor;
+	}
+	letter-spacing:.1em;
+    &:hover {
+		box-shadow:none;
+    }
+    &:active {
+
+    }
+}
+.glass{@include glass($secondaryColor)}
+
+/*============================================
+  Slider
+=============================================*/
+.swipe {
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  backface-visiblility: hidden;
+  -webkit-backface-visibility: hidden;
+  &> div {
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+}
+
+/*============================================
+  Target Fix
+=============================================*/
+.target-fix {
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-indent: -99999px;
+}
+
+/*============================================
+  Accordion
+=============================================*/
+@include basic-accordion;
+
+
+/*============================================
+  Grid
+=============================================*/
 .span1 { @include column(12) }
 .span2 { @include column(12) }
 .span3 { @include column(12) }
@@ -66,5 +227,15 @@ button, input[type=submit] {
   &:after {
     content: "";
     clear: both;
+  }
+}
+
+/*============================================
+  Footer
+=============================================*/
+footer, .footer { margin: $spacing; margin-bottom: 3em; text-align: center;
+  .copyright {
+    font-size: .875em;
+    margin: $spacing;
   }
 }

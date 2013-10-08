@@ -15,10 +15,10 @@
     <div class="primary container">
         <div class="span8">
             <div class="span8">
-                <blockquote>
+                <div class="headline">
                     <h1>HL - Duck Billed Platypus. Semiaquatic Mammal.</h1>
                     <h3>SH - One of Only Five Species of Mammals to Lay Eggs</h3>
-                </blockquote>
+                </div>
             </div>
             <div class="span12">
                 <h2>h2 - Vestibulum pharetra rhoncus velit Lorem ipsum dolor sit amet, consectetur adipiscing eli eget arcu sapien</h2>
@@ -56,7 +56,7 @@
     <div class="tail">
         <div class="container"></div>
     </div>
-    
+
     <!--#include file="../master/includes/footer.asp"-->
     <!--#include file="../master/includes/ad.asp"-->
 </html>
